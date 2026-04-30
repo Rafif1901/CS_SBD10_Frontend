@@ -20,7 +20,7 @@ export default function ShopPage() {
   }, []);
 
   useEffect(() => {
-    axios.get(${process.env.NEXT_PUBLIC_API_URL}/items).then((res) => {
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/items`).then((res) => {
       setItems(res.data.payload);
     });
   }, []);
