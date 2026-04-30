@@ -28,7 +28,7 @@ export default function RegisterPage() {
     setErrorMessage("");
 
     try {
-      await axios.post("http://localhost:3000/user/register", formData);
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/register`, formData);
       setShowSuccessModal(true);
     } catch (error: any) {
       setIsError(true);
